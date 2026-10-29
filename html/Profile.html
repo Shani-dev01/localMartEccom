@@ -1,0 +1,1207 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/auth.css" />
+    <link rel="stylesheet" href="../css/profile.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="navbar"></header>
+    <section class="profile-section">
+      <!-- Edit Profile Form -->
+          <div class="form-seciton" >
+          <form id="editProfileForm" class="edit-profile-form" hidden>
+  <div class="form-header">
+    <div>
+      <h3>Edit Profile</h3>
+      <p>Update your personal information</p>
+    </div>
+
+    <button type="button" id="closeProfileForm"
+      class="close-form-btn" aria-label="Close form">
+      &times;
+    </button>
+  </div>
+
+  <div class="form-group">
+    <label for="editName">Full Name</label>
+    <input
+      type="text"
+      id="editName"
+      name="name"
+      placeholder="Enter your full name"
+      required
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="editEmail">Email Address</label>
+    <input
+      type="email"
+      id="editEmail"
+      name="email"
+      placeholder="Enter your email"
+      required
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="editPhone">Phone Number</label>
+    <input
+      type="tel"
+      id="editPhone"
+      name="phone"
+      placeholder="Enter your phone number"
+      pattern="[0-9]{10}"
+      maxlength="10"
+      required
+    />
+  </div>
+
+  <div class="form-actions">
+    <button type="button" id="cancelProfileEdit"
+      class="cancel-btn">
+      Cancel
+    </button>
+
+    <button type="submit" class="save-profile-btn">
+      Save Changes
+    </button>
+  </div>
+        </form>
+
+
+        <!-- Add Address Form -->
+        <form id="addressForm" class="address-form" hidden>
+     <div class="form-header">
+    <div>
+      <h3>Add New Address</h3>
+      <p>Enter your delivery address details</p>
+    </div>
+
+    <button
+      type="button"
+      id="closeAddressForm"
+      class="close-form-btn"
+      aria-label="Close form"
+    >
+      &times;
+    </button>
+  </div>
+  
+
+  <div class="form-group">
+    <label for="addressLine">House No. / Street Address</label>
+    <input
+      type="text"
+      id="addressLine"
+      name="address"
+      placeholder="House no., street, area"
+      required
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="addressLandmark">Landmark (Optional)</label>
+    <input
+      type="text"
+      id="addressLandmark"
+      name="landmark"
+      placeholder="Nearby landmark"
+    />
+  </div>
+
+  <div class="form-row">
+    <div class="form-group">
+      <label for="addressCity">City</label>
+      <input
+        type="text"
+        id="addressCity"
+        name="city"
+        placeholder="Enter city"
+        required
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="addressState">State</label>
+      <input
+        type="text"
+        id="addressState"
+        name="state"
+        placeholder="Enter state"
+        required
+      />
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group">
+      <label for="addressPincode">PIN Code</label>
+      <input
+        type="text"
+        id="addressPincode"
+        name="pincode"
+        placeholder="6-digit PIN code"
+        pattern="[0-9]{6}"
+        maxlength="6"
+        required
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="addressType">Address Type</label>
+      <select id="addressType" name="addressType" required>
+        <option value="Home">Home</option>
+        <option value="Work">Work</option>
+        <option value="Other">Other</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <button type="button" id="cancelAddressForm" class="cancel-btn">
+      Cancel
+    </button>
+
+    <button type="submit" class="save-profile-btn">
+      Save Address
+    </button>
+  </div>
+        </form>
+
+
+        
+        </div>
+      <!-- Profile sidebar -->
+      <div class="profile-sidebar">
+        <div class="profile-box">
+          <div class="icon">
+            <span class="profile-icon">S</span>
+          </div>
+          <div class="username-email">
+            <span class="username">Shani</span>
+            <span class="user-email">shani@.com</span>
+            <div class="user-edit">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"
+                ></path>
+              </svg>
+              <span>Edit Profile</span>
+            </div>
+          </div>
+        </div>
+        <div class="profile-link">
+          <span class="first-link ">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+            My Profile
+          </span>
+          <span>
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"
+              ></path>
+              <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+              <line x1="12" y1="22.08" x2="12" y2="12"></line>
+            </svg>
+            My Order
+          </span>
+          <span>
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+            My Active Rentals
+          </span>
+          <span>
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+              ></path>
+            </svg>
+            My Wishlist
+          </span>
+          <span></span>
+        </div>
+        <div class="profile-logout">
+          <div class="logout-svg-title">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-square-arrow-right-exit preview-icon"
+            >
+              <path d="M10 12h11" />
+              <path d="m17 16 4-4-4-4" />
+              <path
+                d="M21 6.344V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-1.344"
+              />
+            </svg>
+            <span>Logout</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="profile-container">
+        <!-- Profile right section -->
+        <div class="profile-main-section">
+          <!-- Profile heading -->
+          <div class="profile-heading">
+            <h3>My Profile</h3>
+            <span>Manage your account information and preferences</span>
+          </div>
+
+          <!-- Profile info -->
+          <div class="profile-details">
+            <div class="profile-edit-title">
+              <span>Personal Information</span>
+              <button class="edit-profile-btn" >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"
+                  ></path>
+                </svg>
+                Edit
+              </button>
+            </div>
+            <!-- Profile Avatar Section -->
+            <div class="profile-avatar">
+              <div class="profile-avatar-letter">
+                <span class="profile-icon2" >S</span>
+              </div>
+              <div class="profile-name-email">
+                <h2 class="profile-username"></h2>
+                <span class="profile-user-email" ></span>
+              </div>
+            </div>
+
+            <!-- profile info section  -->
+            <div class="profile-infos">
+              <div class="info-box">
+                <label for="fullName">Full Name</label>
+                <input type="text" class="fullName" value="Shani" disabled />
+              </div>
+              <div class="info-box second-box">
+                <label for="email">Email Address</label>
+                <input
+                  type="text"
+                  class="email"
+                  value="Example@g.com"
+                  disabled
+                />
+              </div>
+              <div class="info-box third-box">
+                <label for="phoneNumber">Phone Number</label>
+                <input
+                  type="text"
+                  class="phoneNumber"
+                  value="9278153247"
+                  disabled
+                />
+              </div>
+            </div>
+          </div>
+
+          
+
+          <!-- profile contact information -->
+          <div class="contact-profile-details">
+            <div class="contact-edit-title">
+              <div class="contact-profile-heading">
+                <h3>Contact Information</h3>
+                <span>Manage your account information and preferences</span>
+              </div>
+              <button  >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"
+                  ></path>
+                </svg>
+                Edit
+              </button>
+            </div>
+
+            <!-- profile info section  -->
+            <div class="profile-infos">
+              <div class="contact-info-box">
+                <div class="icons">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-mail preview-icon"
+                  >
+                    <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" />
+                    <rect x="2" y="4" width="20" height="16" rx="2" />
+                  </svg>
+                </div>
+                <div class="contact-title-lable">
+                  <label for="email">Email Address</label>
+                  <input
+                    type="text"
+                    class="email"
+                    value="Example@g.com"
+                    disabled
+                  />
+                </div>
+              </div>
+              <div class="contact-info-box contact-third-box">
+                <div class="icons">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-phone preview-icon"
+                  >
+                    <path
+                      d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"
+                    />
+                  </svg>
+                </div>
+                <div class="contact-title-lable">
+                  <label for="phone">Phone Number</label>
+                  <input
+                    type="text"
+                    class="phone"
+                    value="9278153247"
+                    disabled
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- saved address section  -->
+          <div class="saved-address-details">
+            <div class="saved-address-title">
+              <div class="saved-address-heading">
+                <h3>Saved Address</h3>
+                <span>Quickly access to youy frequently used locations</span>
+              </div>
+              <button class="edit-address-btn">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"
+                  ></path>
+                </svg>
+                Edit
+              </button>
+            </div>
+
+            <div class="saved-address-main-box">
+              <div class="address-box">
+                <div class="address-icon-title">
+                  <span class="address-icon-box">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-house preview-icon"
+                    >
+                      <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" />
+                      <path
+                        d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
+                      />
+                    </svg>
+                  </span>
+                  <div class="address-title">
+                    <h3>Home</h3>
+                    <div class="address-detail-box" >
+                    <span>House No.</span>
+                    <p>Civil Lines</p>
+                    <span>Varanasi</span>
+                    <span>UttarPradesh</span>
+                    <span>221202</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="address-save-button">
+                  <button>Set</button>
+                </div>
+              </div>
+
+              <div class="address-box">
+                <div class="address-icon-title">
+                  <span class="address-icon-box">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-briefcase-business preview-icon"
+                    >
+                      <path d="M12 12h.01" />
+                      <path d="M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" />
+                      <path d="M22 13a18.15 18.15 0 0 1-20 0" />
+                      <rect width="20" height="14" x="2" y="6" rx="2" />
+                    </svg>
+                  </span>
+                  <div class="address-title">
+                    <h3>Home</h3>
+                    <div class="address-detail-box">
+                    <span></span>
+                    <p></p>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                   </div>
+                  </div>
+                </div>
+                <div class="address-save-button">
+                  <button>Set</button>
+                </div>
+              </div>
+              <div class="address-box">
+                <div class="address-icon-title">
+                  <span class="address-icon-box">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-plus preview-icon"
+                    >
+                      <path d="M5 12h14" />
+                      <path d="M12 5v14" />
+                    </svg>
+                  </span>
+                  <div class="address-title">
+                    <h3>Add New Address</h3>
+                    <div class="address-detail-box">
+                    <span></span>
+                    <p></p>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                   </div>
+                  </div>
+                </div>
+                <div class="address-save-button">
+                  <button>Set</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- logout section  -->
+          <div class="logout-section">
+            <div class="logout-inner-section">
+              <span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-trash preview-icon"
+                >
+                  <path d="M10 11v6" />
+                  <path d="M14 11v6" />
+                  <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6" />
+                  <path d="M3 6h18" />
+                  <path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
+                </svg>
+              </span>
+              <div class="delete-account-title">
+                <h2>Delete Account</h2>
+                <p>Parmanently delete your account and all data</p>
+              </div>
+            </div>
+            <div class="logout-inner-section2">
+              <button>Delete Account</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- My orders section  -->
+        <div class="orders-main-section">
+          <div class="orders-heading">
+            <h3>My Orders</h3>
+            <span>Track and manage your orders</span>
+          </div>
+
+          <!-- Oders tab selection section  -->
+          <div class="orders-tab-card">
+            <div class="orders-links">
+              <ul>
+                <li class="active-underline">All</li>
+                <li>Processing</li>
+                <li>Shipped</li>
+                <li>Delivered</li>
+                <li>Cancelled</li>
+              </ul>
+            </div>
+             
+              <div class="order-cards">
+                <!-- Single Order Card -->
+                <div class="order-card" data-status="delivered">
+                  <!-- Product Image -->
+                  <div class="order-image">
+                    <img src="images/earbuds.jpg" alt="boAt Airdopes 141" />
+                  </div>
+
+                  <!-- Product and Order Information -->
+                  <div class="order-info">
+                    <div class="order-product-details">
+                      <h3 class="product-name">boAt Airdopes 141</h3>
+                      <p class="product-category">Wireless Earbuds</p>
+                    </div>
+
+                    <p class="order-quantity">Qty: 1 <span>|</span> ₹1,299</p>
+
+                    <p class="order-id">Order ID: #LM123456</p>
+
+                    <p class="order-date">Placed on: 12 Apr 2025, 10:24 AM</p>
+                  </div>
+
+                  <!-- Order Status and Actions -->
+                  <div class="order-actions">
+                    <span class="order-status delivered"> Delivered </span>
+
+                    <div class="order-buttons">
+                      <button type="button" class="btn-track-order">
+                        <i class="fa-solid fa-location-dot"></i>
+                        Track Order
+                      </button>
+
+                      <button type="button" class="btn-view-details">
+                        View Details
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- Right Arrow -->
+                  <div class="order-arrow">
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </div>
+                </div>
+               
+                <div class="order-card" data-status="processing">
+                  <!-- Product Image -->
+                  <div class="order-image">
+                    <img src="images/earbuds.jpg" alt="boAt Airdopes 141" />
+                  </div>
+
+                  <!-- Product and Order Information -->
+                  <div class="order-info">
+                    <div class="order-product-details">
+                      <h3 class="product-name">boAt Airdopes 141</h3>
+                      <p class="product-category">Wireless Earbuds</p>
+                    </div>
+
+                    <p class="order-quantity">Qty: 1 <span>|</span> ₹1,299</p>
+
+                    <p class="order-id">Order ID: #LM123456</p>
+
+                    <p class="order-date">Placed on: 12 Apr 2025, 10:24 AM</p>
+                  </div>
+
+                  <!-- Order Status and Actions -->
+                  <div class="order-actions">
+                    <span class="order-status delivered"> Processing </span>
+
+                    <div class="order-buttons">
+                      <button type="button" class="btn-track-order">
+                        <i class="fa-solid fa-location-dot"></i>
+                        Track Order
+                      </button>
+
+                      <button type="button" class="btn-view-details">
+                        View Details
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- Right Arrow -->
+                  <div class="order-arrow">
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </div>
+                </div>
+               
+
+               
+                <div class="order-card" data-status="shipped">
+                  <!-- Product Image -->
+                  <div class="order-image">
+                    <img src="images/earbuds.jpg" alt="boAt Airdopes 141" />
+                  </div>
+
+                  <!-- Product and Order Information -->
+                  <div class="order-info">
+                    <div class="order-product-details">
+                      <h3 class="product-name">boAt Airdopes 141</h3>
+                      <p class="product-category">Wireless Earbuds</p>
+                    </div>
+
+                    <p class="order-quantity">Qty: 1 <span>|</span> ₹1,299</p>
+
+                    <p class="order-id">Order ID: #LM123456</p>
+
+                    <p class="order-date">Placed on: 12 Apr 2025, 10:24 AM</p>
+                  </div>
+
+                  <!-- Order Status and Actions -->
+                  <div class="order-actions">
+                    <span class="order-status delivered"> Shipped </span>
+
+                    <div class="order-buttons">
+                      <button type="button" class="btn-track-order">
+                        <i class="fa-solid fa-location-dot"></i>
+                        Track Order
+                      </button>
+
+                      <button type="button" class="btn-view-details">
+                        View Details
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- Right Arrow -->
+                  <div class="order-arrow">
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </div>
+                </div>
+               
+
+                 
+                <div class="order-card" data-status="cancelled">
+                  <!-- Product Image -->
+                  <div class="order-image">
+                    <img src="images/earbuds.jpg" alt="boAt Airdopes 141" />
+                  </div>
+
+                  <!-- Product and Order Information -->
+                  <div class="order-info">
+                    <div class="order-product-details">
+                      <h3 class="product-name">boAt Airdopes 141</h3>
+                      <p class="product-category">Wireless Earbuds</p>
+                    </div>
+
+                    <p class="order-quantity">Qty: 1 <span>|</span> ₹1,299</p>
+
+                    <p class="order-id">Order ID: #LM123456</p>
+
+                    <p class="order-date">Placed on: 12 Apr 2025, 10:24 AM</p>
+                  </div>
+
+                  <!-- Order Status and Actions -->
+                  <div class="order-actions">
+                    <span class="order-status delivered"> Cancelled </span>
+
+                    <div class="order-buttons">
+                      <button type="button" class="btn-track-order">
+                        <i class="fa-solid fa-location-dot"></i>
+                        Track Order
+                      </button>
+
+                      <button type="button" class="btn-view-details">
+                        View Details
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- Right Arrow -->
+                  <div class="order-arrow">
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </div>
+                </div>
+                <!-- End Single Order Card -->
+              </div>
+              
+            
+          </div>
+        </div>
+
+
+        <!-- Rental products section -->
+        <div class="active-rentals-section">
+
+  <!-- Section Heading -->
+  <div class="rentals-heading">
+    <div>
+      <h2>Active Rentals</h2>
+      <p>Manage your rented products and return dates</p>
+    </div>
+
+    <span class="rentals-count">3 Active Rentals</span>
+  </div>
+
+  <!-- Rental Cards Container -->
+  <div class="rental-cards">
+
+    <!-- Rental Card 1 -->
+    <div class="rental-card" data-status="active">
+
+      <div class="rental-image">
+        <img src="images/camera.jpg" alt="Canon DSLR Camera">
+      </div>
+
+      <div class="rental-info">
+
+        <div class="rental-product-details">
+          <h3 class="rental-product-name">Canon DSLR Camera</h3>
+          <p class="rental-category">Photography Equipment</p>
+        </div>
+
+        <div class="rental-meta">
+          <p><span>Rental ID:</span> #LR10021</p>
+          <p><span>Duration:</span> 7 Days</p>
+        </div>
+
+        <div class="rental-dates">
+          <div>
+            <span class="date-label">Pickup Date</span>
+            <strong>20 Oct 2026</strong>
+          </div>
+
+          <div>
+            <span class="date-label">Return Date</span>
+            <strong>27 Oct 2026</strong>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="rental-actions">
+
+        <span class="rental-status active">Active</span>
+
+        <p class="rental-price">
+          ₹1,500 <span>/ 7 days</span>
+        </p>
+
+        <div class="rental-buttons">
+          <button type="button" class="btn-rental-details">
+            View Details
+          </button>
+
+          <button type="button" class="btn-extend-rental">
+            Extend Rental
+          </button>
+        </div>
+
+      </div>
+
+      <div class="rental-arrow">
+        <i class="fa-solid fa-chevron-right"></i>
+      </div>
+
+    </div>
+
+
+    <!-- Rental Card 2 -->
+    <div class="rental-card" data-status="active">
+
+      <div class="rental-image">
+        <img src="images/laptop.jpg" alt="HP Laptop">
+      </div>
+
+      <div class="rental-info">
+
+        <div class="rental-product-details">
+          <h3 class="rental-product-name">HP Pavilion Laptop</h3>
+          <p class="rental-category">Laptop & Electronics</p>
+        </div>
+
+        <div class="rental-meta">
+          <p><span>Rental ID:</span> #LR10022</p>
+          <p><span>Duration:</span> 14 Days</p>
+        </div>
+
+        <div class="rental-dates">
+          <div>
+            <span class="date-label">Pickup Date</span>
+            <strong>18 Oct 2026</strong>
+          </div>
+
+          <div>
+            <span class="date-label">Return Date</span>
+            <strong>01 Nov 2026</strong>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="rental-actions">
+
+        <span class="rental-status active">Active</span>
+
+        <p class="rental-price">
+          ₹4,200 <span>/ 14 days</span>
+        </p>
+
+        <div class="rental-buttons">
+          <button type="button" class="btn-rental-details">
+            View Details
+          </button>
+
+          <button type="button" class="btn-extend-rental">
+            Extend Rental
+          </button>
+        </div>
+
+      </div>
+
+      <div class="rental-arrow">
+        <i class="fa-solid fa-chevron-right"></i>
+      </div>
+
+    </div>
+
+
+    <!-- Rental Card 3 -->
+    <div class="rental-card" data-status="active">
+
+      <div class="rental-image">
+        <img src="images/speaker.jpg" alt="JBL Bluetooth Speaker">
+      </div>
+
+      <div class="rental-info">
+
+        <div class="rental-product-details">
+          <h3 class="rental-product-name">JBL Bluetooth Speaker</h3>
+          <p class="rental-category">Audio & Accessories</p>
+        </div>
+
+        <div class="rental-meta">
+          <p><span>Rental ID:</span> #LR10023</p>
+          <p><span>Duration:</span> 3 Days</p>
+        </div>
+
+        <div class="rental-dates">
+          <div>
+            <span class="date-label">Pickup Date</span>
+            <strong>25 Oct 2026</strong>
+          </div>
+
+          <div>
+            <span class="date-label">Return Date</span>
+            <strong>28 Oct 2026</strong>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="rental-actions">
+
+        <span class="rental-status active">Active</span>
+
+        <p class="rental-price">
+          ₹600 <span>/ 3 days</span>
+        </p>
+
+        <div class="rental-buttons">
+          <button type="button" class="btn-rental-details">
+            View Details
+          </button>
+
+          <button type="button" class="btn-extend-rental">
+            Extend Rental
+          </button>
+        </div>
+
+      </div>
+
+      <div class="rental-arrow">
+        <i class="fa-solid fa-chevron-right"></i>
+      </div>
+
+    </div>
+
+  </div>
+
+        </div>
+
+        <!-- Whishlist seciton  -->
+         
+<div class="wishlist-section">
+
+  <!-- Wishlist Heading -->
+  <div class="wishlist-heading">
+    <div>
+      <h2>My Wishlist</h2>
+      <p>Save your favourite products for later</p>
+    </div>
+
+    <span class="wishlist-count">3 Items</span>
+  </div>
+
+  <!-- Wishlist Products -->
+  <div class="wishlist-products">
+
+    <!-- Product 1 -->
+    <div class="wishlist-card" data-product-id="101">
+
+      <div class="wishlist-image">
+        <img src="images/earbuds.jpg" alt="boAt Airdopes 141">
+      </div>
+
+      <div class="wishlist-info">
+        <h3 class="wishlist-product-name">boAt Airdopes 141</h3>
+        <p class="wishlist-category">Wireless Earbuds</p>
+
+        <div class="wishlist-rating">
+          <i class="fa-solid fa-star"></i>
+          <span>4.3</span>
+          <span class="rating-count">(128 reviews)</span>
+        </div>
+
+        <div class="wishlist-price">
+          <strong>₹1,299</strong>
+          <del>₹2,490</del>
+          <span class="wishlist-discount">48% OFF</span>
+        </div>
+
+        <span class="wishlist-stock in-stock">
+          <i class="fa-solid fa-circle-check"></i>
+          In Stock
+        </span>
+      </div>
+
+      <div class="wishlist-actions">
+        <button type="button" class="wishlist-add-cart">
+          <i class="fa-solid fa-cart-shopping"></i>
+          Add to Cart
+        </button>
+
+        <button
+          type="button"
+          class="wishlist-remove"
+          aria-label="Remove boAt Airdopes 141 from wishlist"
+        >
+          <i class="fa-regular fa-trash-can"></i>
+          Remove
+        </button>
+      </div>
+
+    </div>
+
+
+    <!-- Product 2 -->
+    <div class="wishlist-card" data-product-id="102">
+
+      <div class="wishlist-image">
+        <img src="images/watch.jpg" alt="Smart Watch">
+      </div>
+
+      <div class="wishlist-info">
+        <h3 class="wishlist-product-name">Noise Smart Watch</h3>
+        <p class="wishlist-category">Smart Wearables</p>
+
+        <div class="wishlist-rating">
+          <i class="fa-solid fa-star"></i>
+          <span>4.2</span>
+          <span class="rating-count">(96 reviews)</span>
+        </div>
+
+        <div class="wishlist-price">
+          <strong>₹1,799</strong>
+          <del>₹3,499</del>
+          <span class="wishlist-discount">49% OFF</span>
+        </div>
+
+        <span class="wishlist-stock in-stock">
+          <i class="fa-solid fa-circle-check"></i>
+          In Stock
+        </span>
+      </div>
+
+      <div class="wishlist-actions">
+        <button type="button" class="wishlist-add-cart">
+          <i class="fa-solid fa-cart-shopping"></i>
+          Add to Cart
+        </button>
+
+        <button
+          type="button"
+          class="wishlist-remove"
+          aria-label="Remove Noise Smart Watch from wishlist"
+        >
+          <i class="fa-regular fa-trash-can"></i>
+          Remove
+        </button>
+      </div>
+
+    </div>
+
+
+    <!-- Product 3 -->
+    <div class="wishlist-card" data-product-id="103">
+
+      <div class="wishlist-image">
+        <img src="images/headphones.jpg" alt="Wireless Headphones">
+      </div>
+
+      <div class="wishlist-info">
+        <h3 class="wishlist-product-name">Sony Wireless Headphones</h3>
+        <p class="wishlist-category">Audio Accessories</p>
+
+        <div class="wishlist-rating">
+          <i class="fa-solid fa-star"></i>
+          <span>4.5</span>
+          <span class="rating-count">(214 reviews)</span>
+        </div>
+
+        <div class="wishlist-price">
+          <strong>₹2,499</strong>
+          <del>₹3,999</del>
+          <span class="wishlist-discount">38% OFF</span>
+        </div>
+
+        <span class="wishlist-stock out-of-stock">
+          <i class="fa-solid fa-circle-xmark"></i>
+          Out of Stock
+        </span>
+      </div>
+
+      <div class="wishlist-actions">
+        <button type="button" class="wishlist-add-cart" disabled>
+          Currently Unavailable
+        </button>
+
+        <button
+          type="button"
+          class="wishlist-remove"
+          aria-label="Remove Sony Wireless Headphones from wishlist"
+        >
+          <i class="fa-regular fa-trash-can"></i>
+          Remove
+        </button>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+              
+            
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <footer class="footer"></footer>
+
+    <script src="../js/navbar.js"></script>
+    <script src="../js/footer.js"></script>
+    <script src="../js/profile.js"></script>
+  </body>
+</html>

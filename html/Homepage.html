@@ -12,6 +12,14 @@
     />
     <script src="https://unpkg.com/lucide@latest"></script>
     <title>Online Shopping From Local Store.</title>
+    <script>
+      let localLogin = localStorage.getItem('isLoggedIn');
+      let sessionLogin = sessionStorage.getItem('isLoggedIn');
+  
+      if (localLogin !== 'true' && sessionLogin !== 'true') {
+      window.location.replace('./login.html');
+      }
+    </script>
   </head>
   <body>
     <header class="navbar">
@@ -49,7 +57,6 @@
           <span  class="banner-dots" data-slide="2"></span>
         </div>
 
-       
     </section>
     <section class="shop-by-category" >
       <div class="shop-by-category-box">
@@ -64,7 +71,7 @@
       </div>
       </div>
       <div class="category-item" >
-        <!-- <div class="category">
+        <!-- <div class="category"  data-category="category" >
           <div class="img-container" >
             <img src="https://images.unsplash.com/photo-1597362925123-77861d3fbac7?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
             </div>
@@ -87,7 +94,7 @@
         </div>
       </div>
       <div class="our-product-card-container" >
-        <div class="cards">
+        <!-- <div class="cards">
           <div class="cards-img">
             <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?q=80&w=580&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
             <div class="card-icons" >
@@ -98,20 +105,158 @@
             </div>
           </div>
           <div class="product-details" >
-
+            <div class="cards-btn" >
+              <h3>Shoes</h3>
+              <span>Price</span>
+            </div>
+              <button>Buy Now</button>
           </div>
-        </div>
-        <div class="cards"></div>
-        <div class="cards"></div>
-        <div class="cards"></div>
-        <div class="cards"></div>
-        <div class="cards"></div>
-        <div class="cards"></div>
-        <div class="cards"></div>
+        </div> -->
+        
       </div>
     </section>
-    <script src="../js/data.js"></script>
-    <script src="../js/script.js"></script>
-    <script src="../js/navbar.js"></script>
+    <section class=" rental products-section" >
+      <div class="our-product rental-products" >
+        <div class="our-product-titles  rentel-products-title">
+        <h2>Popular Products on Rent</h2>
+        <p>Explore premium products available on affordable rental plans.</p>
+        </div>
+        <div class="our-product-btn rental-product-btn">
+          <button>
+            View All Products 
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </button>
+        </div>
+      </div>
+      <div class="our-product-card-container rental-product-card" >
+        <!-- <div class="rental-cards">
+          <div class="rental-img">
+            <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?q=80&w=580&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+            <div class="card-icons rental-icons" >
+              <span>25% OFF</span>
+              <button>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"/></svg>
+              </button>
+            </div>
+          </div>
+          <div class="rental-product-detals" >
+            <div class="rental-card-btn" >
+              <h3>Shoes</h3>
+              <span>Price</span>
+            </div>
+              <button>Buy Now</button>
+          </div>
+        </div> -->
+        
+      </div>
+    </section>
+    <section class="become-a-vendor">
+  <div class="vendor-container">
+    
+    <!-- Left Side: Text & Content -->
+    <div class="vendor-content">
+      <h2>Start Selling & Renting with Us!</h2>
+      <p>Join our growing community of vendors. List your unused tech, fashion, or vehicles and start earning today.</p>
+      
+      <ul class="vendor-benefits">
+        <li>
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#28a745" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          Zero Registration Fee
+        </li>
+        <li>
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#28a745" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          Reach Thousands of Local Buyers
+        </li>
+        <li>
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#28a745" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          Easy-to-use Vendor Dashboard
+        </li>
+      </ul>
+
+      <button class="vendor-btn">Become a Vendor</button>
+    </div>
+
+    <!-- Right Side: Image -->
+    <div class="vendor-image">
+      <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&q=80" alt="Become a Vendor">
+    </div>
+
+  </div>
+</section>
+<section class="testimonials-section">
+  <div class="section-header" style="text-align: center; margin-bottom: 40px;">
+    <h2>What Our Community Says</h2>
+    <p style="color: gray; font-size: 14px;">Trusted by thousands of buyers, sellers, and renters.</p>
+  </div>
+
+  <div class="testimonials-container">
+    
+    <!-- Testimonial 1 (Renter) -->
+    <div class="testimonial-card">
+      <div class="stars">
+        <!-- 5 Stars -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#FFD700" stroke="#FFD700" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#FFD700" stroke="#FFD700" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#FFD700" stroke="#FFD700" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#FFD700" stroke="#FFD700" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#FFD700" stroke="#FFD700" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      </div>
+      <p class="review-text">"I needed a DSLR camera for my weekend trip but didn't want to spend 80k. Renting it from here for just ₹800/day was the smartest decision ever!"</p>
+      <div class="user-profile">
+        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&q=80" alt="User">
+        <div class="user-info">
+          <h4>Priya Sharma</h4>
+          <span>Frequent Renter</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Testimonial 2 (Vendor) -->
+    <div class="testimonial-card">
+      <div class="stars">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#FFD700" stroke="#FFD700" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#FFD700" stroke="#FFD700" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#FFD700" stroke="#FFD700" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#FFD700" stroke="#FFD700" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#FFD700" stroke="#FFD700" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      </div>
+      <p class="review-text">"I listed my old MacBook and a mountain bike here. Within a week, I started earning steady rental income. The dashboard is super easy to use!"</p>
+      <div class="user-profile">
+        <img src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?w=150&q=80" alt="User">
+        <div class="user-info">
+          <h4>Rahul Verma</h4>
+          <span>Verified Vendor</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Testimonial 3 (Buyer) -->
+    <div class="testimonial-card">
+      <div class="stars">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#FFD700" stroke="#FFD700" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#FFD700" stroke="#FFD700" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#FFD700" stroke="#FFD700" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#FFD700" stroke="#FFD700" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#FFD700" stroke="#FFD700" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      </div>
+      <p class="review-text">"Bought a mechanical keyboard at almost half the price. The quality was exactly as described. Best marketplace for tech enthusiasts!"</p>
+      <div class="user-profile">
+        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&q=80" alt="User">
+        <div class="user-info">
+          <h4>Amit Kumar</h4>
+          <span>Verified Buyer</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<Footer class="footer">
+
+</Footer>
+<script src="../js/data.js"></script>
+<script src="../js/navbar.js"></script>
+<script src="../js/script.js"></script>
+<script src="../js/footer.js"></script>
   </body>
 </html>

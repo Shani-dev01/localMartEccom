@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/responsive.css" />
+    <link rel="stylesheet" href="../css/categories.css" />
     <!-- In <head> -->
     <link
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&display=swap"
@@ -14,10 +15,156 @@
     <title>Categories.</title>
   </head>
   <body>
-    <header class="navbar">
+    <header class="navbar"></header>
 
-    </header>
-    <script src="../js/script.js"></script>
+    <section class="categories-main-section">
+      <div class="categories-banner">
+        <div class="title-img">
+          <nav class="breadcrumbs">
+            <!-- <a href="Homepage.html">Home</a>
+      <span class="separator">&gt;</span>
+      <a href="categories.html">Categories</a>
+      <span class="separator">&gt;</span>
+      <span class="current">Electronics</span> -->
+          </nav>
+          <div class="categories-title">
+            <h3>Electronics</h3>
+            <span
+              >Latest gadgets, smart devices and more. Stay tunned, stay
+              ahead</span
+            >
+          </div>
+        </div>
+        <div class="categories-img">
+          <!-- <img src="https://gameloot.in/wp-content/uploads/sites/2/2025/10/Samsung-Laptop.jpg" alt=""> -->
+        </div>
+      </div>
+
+      <section class="category-products">
+        <!-- LEFT: Filter Sidebar -->
+        <aside class="filter-sidebar">
+          <div class="filter-header">
+            <h2>Filters</h2>
+            <button id="clearFilters" type="button">Clear All</button>
+          </div>
+
+          <!-- Price Range -->
+          <div class="filter-group">
+            <h3>Price Range</h3>
+            <input
+              type="number"
+              id="minPrice"
+              placeholder="Min price"
+              min="0"
+            />
+            <input
+              type="number"
+              id="maxPrice"
+              placeholder="Max price"
+              min="0"
+            />
+          </div>
+
+          <!-- Customer Rating -->
+          <div class="filter-group">
+            <h3>Customer Rating</h3>
+            <select id="ratingFilter">
+              <option value="all">All Ratings</option>
+              <option value="4">4★ & above</option>
+              <option value="3">3★ & above</option>
+              <option value="2">2★ & above</option>
+            </select>
+          </div>
+
+          <!-- Availability -->
+          <div class="filter-group">
+            <h3>Availability</h3>
+            <label class="stock-option">
+              <input type="checkbox" id="inStock" />
+              In Stock Only
+            </label>
+          </div>
+        </aside>
+
+        <!-- RIGHT: Products Section -->
+        <div class="products-section">
+          <div class="products-toolbar">
+            <p id="productCount">Showing products <span></span> </p>
+
+            <div class="toolbar-actions">
+              <select id="sortProducts">
+                <option value="default">Featured</option>
+                <option value="low-high">Price: Low to High</option>
+                <option value="high-low">Price: High to Low</option>
+                <option value="rating">Top Rated</option>
+                <option value="name">Name: A to Z</option>
+              </select>
+
+              
+            </div>
+          </div>
+
+          <div id="activeFilters" class="active-filters"></div>
+
+          <!-- JavaScript will render product cards here -->
+          
+<div class="products-grid" id="productsGrid">
+
+    <!-- <article class="product-card">
+
+        <div class="product-image">
+            <span class="discount-badge">-20% OFF</span>
+            <button class="wishlist-btn" type="button"
+                    aria-label="Add to wishlist">
+                ♡
+            </button>
+            <img
+                src="https://dummyjson.com/image/400x400?type=webp&bg=ffffff"
+                alt="Product image"
+            >
+        </div>
+
+        <div class="product-info">
+            <p class="product-category">Electronics</p>
+
+            <h3>Wireless Headphones</h3>
+
+            <div class="product-rating">
+                <span>★</span>
+                <strong>4.8</strong>
+                <span class="review-count">(120 reviews)</span>
+            </div>
+
+            <div class="product-pricing">
+                <span class="product-price">₹1,599</span>
+                <span class="old-price">₹1,999</span>
+            </div>
+
+            <p class="product-stock">✓ In Stock</p>
+
+            <button class="add-cart-btn" type="button">
+                <span>＋</span> Add to Cart
+            </button>
+        </div>
+
+    </article> -->
+
+</div>
+
+
+          </div>
+
+          <div id="noProducts" hidden>
+            <h3>No products found</h3>
+            <p>Try changing your filters.</p>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <footer class="footer"></footer>
+    <script src="../js/categories.js"></script>
     <script src="../js/navbar.js"></script>
+    <script src="../js/footer.js"></script>
   </body>
 </html>

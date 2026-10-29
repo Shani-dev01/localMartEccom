@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/auth.css">
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="navbar"></header>
+
+  <section class="auth-box">
+        <!-- LEFT SIDE: FORM SECTION -->
+        <div class="auth-form-section">
+            <div class="auth-heading">
+                <div class="auth-bagde-heading">
+                    <!-- Added an icon for the badge -->
+                    <span class="welcome-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>
+                        Welcome Back
+                    </span>
+                </div>
+                <div class="auth-heading-para">
+                    <div>
+                        <span class="login-title">Login </span>
+                        <span class="login-title2">to Your Account</span>
+                    </div>
+                    <p>Access your orders, track your deliveries and enjoy better shopping experience.</p>
+                </div>
+            </div>
+
+            <!-- Form tag added for proper submission -->
+            <form action="#" class="login-form">
+                <div class="auth-inputs">
+                    <div class="auth-input-email">
+                        <p>Email or Phone Number*</p>
+                        <div class="auth-email-input">
+                            <svg class="auth-input-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                                <circle cx="12" cy="7" r="4" />
+                            </svg>
+                            <input class="login-email-input" type="text" placeholder="Enter Your Email or Phone Number" aria-label="Email or phone number" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="auth-inputs" style="margin-top: 15px;">
+                    <div class="auth-input-password">
+                        <p>Enter Your Password*</p>
+                        <div class="auth-password-input">
+                            <svg class="auth-input-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="11" width="18" height="11" rx="2" />
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                            </svg>
+                            <input class="login-password-input" type="password" placeholder="Enter Your Password" aria-label="Password" required>
+                        </div>
+                        <div class="auth-chekbox">
+                            <div class="auth-title"><input  type="checkbox" id="remember"> <label for="remember">Remember Me</label></div>
+                            <a href="#">Forgot Password?</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="auth-login-btn" style="margin-top: 25px;">
+                    <button type="submit">Login</button>
+                </div>
+            </form>
+
+            <div class="auth-divider">
+                <span class="auth-divider-line1"></span>
+                <p>OR</p>
+                <span class="auth-divider-line2"></span>
+            </div>
+
+            <div class="auth-signup-btn">
+                <button type="button" onclick="window.location.href='signup.html'"> Create an account <svg style="margin-left:8px;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></button>
+            </div>
+        </div>
+
+        <!-- RIGHT SIDE: IMAGE SECTION (Completed) -->
+        <div class="auth-image-section">
+            <div class="promo-text">
+                <h3>Good to see you again!</h3>
+                <p>Login and continue your shopping journey with LocalMart.</p>
+            </div>
+            <!-- Aap yahan apni shopping cart wali image ka path daal dijiyega -->
+            <img src="https://png.pngtree.com/png-vector/20240614/ourmid/pngtree-photo-of-grocery-shopping-cart-full-food-items-isolated-on-a-png-image_12597117.png" alt="Shopping Cart" class="promo-img">
+        </div>
+    </section>
+
+    <footer class="footer"></footer>
+
+    <script src="../js/navbar.js"></script>
+    <script src="../js/footer.js"></script>
+    <script src="../js/auth.js"></script>
+  </body>
+</html>
